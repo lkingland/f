@@ -1,0 +1,25 @@
+specVersion: 0.35.0
+name: f
+runtime: go
+registry: ""
+image: ""
+imageDigest: ""
+created: 2023-01-24T17:28:53.811907+09:00
+build:
+  buildpacks:
+  - paketo-buildpacks/go-dist
+  - ghcr.io/boson-project/go-function-buildpack:tip
+  builder: ""
+  buildEnvs: []
+run:
+  volumes: []
+  envs: []
+deploy:
+  namespace: ""
+  remote: false
+  annotations: {}
+  options: {}
+  labels: []
+  healthEndpoints:
+    liveness: /health/liveness
+    readiness: /health/readiness
